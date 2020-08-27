@@ -1,16 +1,19 @@
-//5. O Sr. Manoel Joaquim possui uma grande loja de artigos de R$ 1,99, com cerca de 10 caixas. Para agilizar o cálculo de quanto cada cliente deve pagar ele desenvolveu um tabela que contém o número de itens que o cliente comprou e ao lado o valor da conta. Desta forma a atendente do caixa precisa apenas contar quantos itens o cliente está levando e olhar na tabela de preços. Você foi contratado para desenvolver o programa que monta esta tabela de preços, que conterá os preços de 1 até 50 produtos, conforme o exemplo abaixo:
+//4. Crie uma função que receba um número e devolva uma soma progressiva. Por exemplo, recebendo o número 5, a função deve retornar 15, ou seja, o resultado de 1 + 2 + 3 + 4 + 5. 
 
-let preco = 1.99 // se ajuste de preço basta alterar o valor da variavel
+const read = require('readline-sync')
 
-function tabela (num){
-    for (let i = 1; i <=num; i++){
-       
-    console.log(i, " - R$ ", (i * preco).toFixed(2))
+let num = parseFloat(read.question("Digite um numero: "))
+
+
+
+function somarNumero(){
+    let resultado = 1
+    for(let cont = num; cont > 1; cont--){
+        resultado += cont
     }
+     return resultado;
 }
 
+console.log(somarNumero(num))
 
-console.log ("Lojas Quase Dois - Tabela de preços")
 
-
-tabela(50)
